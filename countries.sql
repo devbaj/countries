@@ -1,3 +1,5 @@
+USE world;
+
 -- 1
 SELECT countries.name, languages.language, languages.percentage
 FROM countries
@@ -23,7 +25,7 @@ JOIN languages ON countries.id = languages.country_id AND languages.percentage >
 ORDER BY languages.percentage DESC; -- Not sure if this has fully accomplished the task, need clarification on question
 
 -- 5
-SELECT countries.name
+SELECT countries.name, countries.surface_area, countries.population
 FROM countries
 WHERE countries. surface_area < 501 AND countries.population > 100000;
 
