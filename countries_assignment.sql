@@ -13,5 +13,13 @@ ORDER BY COUNT(cities.id) DESC;
 -- 3
 SELECT cities.name, cities.population
 FROM countries
-JOIN cities ON countries.id = cities.country_id AND countries.name = 'Mexico' AND cities.population < 500000
+JOIN cities ON countries.id = cities.country_id AND countries.name = 'Mexico' AND cities.population > 500000
 ORDER BY cities.population DESC;
+
+-- 4
+SELECT countries.name, languages.language, languages.percentage
+FROM countries
+JOIN languages ON countries.id = languages.country_id AND languages.percentage > 89
+ORDER BY languages.percentage DESC; -- Not sure if this has fully accomplished the task, need clarification on question
+
+-- 5
