@@ -30,6 +30,11 @@ WHERE countries. surface_area < 501 AND countries.population > 100000;
 -- 6
 SELECT countries.name, countries.government_form, countries.life_expectancy
 FROM countries
-WHERE countries.government_form = "Constitutional Monarchy" AND countries.life_expectancy > 75;
+WHERE countries.government_form = "Constitutional Monarchy" AND countries.capital > 200 AND countries.life_expectancy > 75;
 
 -- 7
+select countries.name, cities.name, cities.district, cities.population
+FROM countries
+JOIN cities ON countries.id = cities.country_id AND cities.district = "Buenos Aires" AND cities.population > 500000;
+
+-- 8
