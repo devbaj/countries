@@ -28,3 +28,8 @@ FROM countries
 WHERE countries. surface_area < 501 AND countries.population > 100000;
 
 -- 6
+SELECT countries.name, countries.government_form, countries.life_expectancy
+FROM countries
+WHERE countries.government_form = "Constitutional Monarchy" AND countries.life_expectancy > 75;
+
+-- 7
